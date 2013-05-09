@@ -1,0 +1,11 @@
+seq <- c( 23 ,1014, 5013, 10021, 50035,  100181) 
+par <- c(12, 515, 1565,  2515, 12531 , 25076) 
+g_range <- range(0, seq, par)
+plot(seq, type="o", col="blue" , ylim=g_range, axes=FALSE, ann=FALSE)
+axis(1, at=1:6, lab=c("1", "100", "500", "1000", "5000", "10000"))
+axis(2, las=1, at=20000*0:g_range[2])
+box()
+lines(par, type="o", pch=22, lty=2, col="red")
+
+title(xlab= "Days", col.lab=rgb(0,0.5,0))
+title(ylab= "Total", col.lab=rgb(0,0.5,0))
